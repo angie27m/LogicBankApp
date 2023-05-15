@@ -11,12 +11,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/*
+ * Clase que permite tener el control lógico de los microservicios expuestos en relación a las cuentas
+ */
 @Service()
 public class CuentaService {
 
     @Autowired
     CuentaRepository cuentaRepository;
 
+    /**
+     * Metodo que permite obtener las cuentas de un cliente
+     *
+     * @param clienteId Identificador del cliente
+     */
     public List<CuentaDTO> obtenerCuentasCliente(Long clienteId) {
         List<CuentaDTO> cuentasDTO = new ArrayList<>();
         List<Cuenta> cuentas = cuentaRepository.findAllByClienteId(clienteId);
@@ -32,6 +40,11 @@ public class CuentaService {
         return cuentasDTO;
     }
 
+    /**
+     * Crea una cuenta de banco para un cliente
+     *
+     * @param cuenta Entidad que contiene información de la cuenta
+     */
     public Object crearCuentaCliente(Cuenta cuenta) {
         Cuenta cuentaNueva = new Cuenta();
         if (cuenta != null) {
@@ -40,13 +53,18 @@ public class CuentaService {
         return cuentaNueva;
     }
 
+    /**
+     * Actualiza la información de una cuenta de banco
+     *
+     * @param numeroCuenta Número de la cuenta del cliente
+     * @param cuenta       Entidad que contiene información de la cuenta
+     */
     public Cuenta actualizarCuentaCliente(Long numeroCuenta, Cuenta cuenta) {
         Cuenta cuentaEncontrada = new Cuenta();
         Optional<Cuenta> optCuenta = cuentaRepository.findByNumeroCuenta(numeroCuenta);
 
         if (optCuenta.isEmpty()) {
-            System.out.println("No existe esta cuenta de cliente");
-            //throw new ResourceNotFoundException("No existe cliente con id: " + id);
+            throw new ResourceNotFoundException("No existe esta cuenta de cliente");
         } else {
             cuentaEncontrada = optCuenta.get();
             if (cuenta.getNumeroCuenta() != null) cuentaEncontrada.setNumeroCuenta(cuenta.getNumeroCuenta());
@@ -60,6 +78,11 @@ public class CuentaService {
         return cuentaEncontrada;
     }
 
+    /**
+     * Elimina una cuenta de banco según su número
+     *
+     * @param numeroCuenta Número de la cuenta del cliente
+     */
     public boolean eliminarCuentaCliente(Long numeroCuenta) {
         boolean isRemoved;
         Cuenta cuentaEncontrada = new Cuenta();

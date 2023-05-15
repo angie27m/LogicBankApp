@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
+/*
+ * Clase que expone la información de Movimiento
+ */
 public class MovimientoDTO {
 
     private Long numeroCuenta;

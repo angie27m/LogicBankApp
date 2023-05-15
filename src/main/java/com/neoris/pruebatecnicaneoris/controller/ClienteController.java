@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/*
+ * Clase que contiene los servicios correspondientes a la entidad Cliente
+ */
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {

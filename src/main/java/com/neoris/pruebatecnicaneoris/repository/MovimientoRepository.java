@@ -9,6 +9,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+/*
+ * Clase que permite la comunicación con la tabla movimiento en base de datos
+ */
 @Repository
 public interface MovimientoRepository extends JpaRepository<Movimiento, Integer> {
 

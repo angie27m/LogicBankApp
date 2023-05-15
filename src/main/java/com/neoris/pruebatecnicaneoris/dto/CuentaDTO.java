@@ -2,6 +2,9 @@ package com.neoris.pruebatecnicaneoris.dto;
 
 import com.neoris.pruebatecnicaneoris.entity.Cliente;
 
+/*
+ * Clase que expone la información de Cuenta
+ */
 public class CuentaDTO {
 
     private Long numeroCuenta;

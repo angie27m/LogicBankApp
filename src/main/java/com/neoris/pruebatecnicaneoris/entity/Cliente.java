@@ -2,6 +2,9 @@ package com.neoris.pruebatecnicaneoris.entity;
 
 import javax.persistence.*;
 
+/*
+ * Clase que representa la entidad Cliente
+ */
 @Entity
 @Table(name = Cliente.TABLE_NAME, schema = Cliente.SCHEMA_NAME)
 @SequenceGenerator(name = Cliente.SEQUENCE_NAME, sequenceName = Cliente.SEQUENCE_NAME, allocationSize = 1)

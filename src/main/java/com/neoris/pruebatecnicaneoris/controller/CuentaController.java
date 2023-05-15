@@ -1,7 +1,6 @@
 package com.neoris.pruebatecnicaneoris.controller;
 
 import com.neoris.pruebatecnicaneoris.dto.CuentaDTO;
-import com.neoris.pruebatecnicaneoris.entity.Cliente;
 import com.neoris.pruebatecnicaneoris.entity.Cuenta;
 import com.neoris.pruebatecnicaneoris.service.CuentaService;
 import io.swagger.annotations.ApiOperation;
@@ -13,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/*
+ * Clase que contiene los servicios correspondientes a la entidad Cuenta
+ */
 @RestController
 @RequestMapping("/cuentas")
 public class CuentaController {

@@ -3,6 +3,9 @@ package com.neoris.pruebatecnicaneoris.entity;
 import javax.persistence.*;
 import java.util.Date;
 
+/*
+ * Clase que representa la entidad Movimiento
+ */
 @Entity
 @Table(name = Movimiento.TABLE_NAME, schema = Movimiento.SCHEMA_NAME)
 @SequenceGenerator(name = Movimiento.SEQUENCE_NAME, sequenceName = Movimiento.SEQUENCE_NAME, allocationSize = 1)

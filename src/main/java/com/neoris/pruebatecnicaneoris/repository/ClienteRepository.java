@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+/*
+ * Clase que permite la comunicación con la tabla cliente en base de datos
+ */
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 

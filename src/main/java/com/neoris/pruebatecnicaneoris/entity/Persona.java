@@ -2,6 +2,9 @@ package com.neoris.pruebatecnicaneoris.entity;
 
 import javax.persistence.*;
 
+/*
+ * Clase que representa la entidad Persona
+ */
 @Entity
 @Table(name = Persona.TABLE_NAME, schema = Persona.SCHEMA_NAME)
 @Inheritance(strategy = InheritanceType.JOINED)

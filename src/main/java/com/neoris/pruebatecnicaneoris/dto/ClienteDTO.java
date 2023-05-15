@@ -1,5 +1,8 @@
 package com.neoris.pruebatecnicaneoris.dto;
 
+/*
+ * Clase que expone la información de Cliente
+ */
 public class ClienteDTO {
 
     private Long clienteId;
